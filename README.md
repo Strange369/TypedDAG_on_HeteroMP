@@ -1,7 +1,7 @@
 # TypedDAG_on_HeteroMP
 The evaluation source code for the paper "Type-aware Federated Scheduling for Typed DAG Tasks on Heterogeneous Multi-cores"
 <br />
-## Before you start
+## Before starting
 The Dirichlet-Rescale (DRS) algorithm[^1] is applied for generate utilizations of task sets randomly
 ```
 pip3 install drs
