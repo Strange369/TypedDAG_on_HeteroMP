@@ -12,7 +12,7 @@ If you only want to reproduce the results in our paper, you can run these bash s
 2. ./generators/converte_all.sh <allocate the type for each node of these tasks>
 3. ./experiments/improved_fed_new.sh <schedulability test for the federated based approach in our paper>
 4. ./experiments/greedy.sh <schedulability test for the greedy approach in our paper>
-5. ./experiments/han.sh <schedulability test for the approached in Han et al. in [^2]>
+5. ./experiments/han.sh <schedulability test for the approached in Han et al.>
 ```
 **Please note:**
 - You can skip the first step by using the provided pure task sets directly, which are the same as what we presented in our paper.
