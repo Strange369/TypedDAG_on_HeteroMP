@@ -15,7 +15,7 @@ Run `python3 tasksets_generator_pure.py` to generate the pure DAG tasks without 
 ```
 An additional parameter is `sparse`, which indicates the range of the number of tasks per set. 
 `sp=0` by default, which means the number of tasks \in [0.5 * max{M_a, M_b}, 2 * max{M_a, M_b}].
-The generated task sets will be stored under the path `..\experiments\inputs\tasks_pure`.
+The generated task sets will be stored under the path `..\experiments\inputs\tasks_pure`.<br />
 Currently, there are some task sets that are generated from the configurations in our paper.
 <br />
 #### Type info allocation
@@ -35,9 +35,9 @@ Inside the `algorithms` folder, the file `sched_ded.py` contains all these algor
 - `han`: federated scheduling algorithms proposed by Han et al. in [^1], both `EMU` mode and `Greedy` mode are implemented.
 
 ## Experiments
-In the `experiments` folder, we provide the tools to operate the schedulability tests with different approaches. 
-The results will be stored in the folder `outputs/results`. Currently, there are some results based on our paper's configurations.
-In addition, we provide two scripts to draw the figures according to the obtained results
+In the `experiments` folder, we provide the tools to operate the schedulability tests with different approaches. <br />
+The results will be stored in the folder `outputs/results`. Currently, there are some results based on our paper's configurations.<br />
+In addition, we provide two scripts to draw the figures according to the obtained results, i.e., `draw_sched_6_1/2.py`.
 
 ## Figures
 These two figures in the folder `figures` are the results in our paper.
