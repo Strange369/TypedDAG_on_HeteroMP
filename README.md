@@ -1,6 +1,24 @@
 # TypedDAG_on_HeteroMP
 The evaluation source code for the paper "Type-aware Federated Scheduling for Typed DAG Tasks on Heterogeneous Multi-cores"
 <br />
+## Before you start
+The Dirichlet-Rescale (DRS) algorithm[^1] is applied for generate utilizations of task sets randomly
+```
+pip3 install drs
+```
+If you only want to reproduce the results in our paper, you can run these bash scripts that we provide:
+```
+1. ./generators/generate_all.sh <generate all the pure task sets.>
+2. ./generators/converte_all.sh <allocate the type for each node of these tasks>
+3. ./experiments/improved_fed_new.sh <schedulability test for the federated based approach in our paper>
+4. ./experiments/greedy.sh <schedulability test for the greedy approach in our paper>
+5. ./experiments/han.sh <schedulability test for the approached in Han et al. in [^2]>
+```
+**Please note:**
+- You can skip the first step by using the provided pure task sets directly, which are the same as what we presented in our paper.
+- Step 2 can start once all the pure task sets have been generated.
+- Step 3, 4, and 5 can be executed in parallel once all the typed-DAG task sets have been generated from Step 2.
+
 ## Generators
 Inside the genrators folder, we provide tools to 1) generate DAG tasks and 2) allocate the type infomation to generated DAG tasks with different configurations.
 #### DAG Task generator
@@ -32,7 +50,7 @@ The generated task sets will be stored under the path `..\experiments\inputs\tas
 Inside the `algorithms` folder, the file `sched_ded.py` contains all these algorithms for schedulability test, including:
 - `improved_federated_new`: The improved type-aware federated scheduling algorithm proposed in this paper (Sec. 7).
 - `greedy_federated`: The greedy type-aware federated scheduling algorithm proposed in this paper (Sec. 5.2).
-- `han`: federated scheduling algorithms proposed by Han et al. in [^1], both `EMU` mode and `Greedy` mode are implemented.
+- `han`: federated scheduling algorithms proposed by Han et al. in [^2], both `EMU` mode and `Greedy` mode are implemented.
 
 ## Experiments
 In the `experiments` folder, we provide the tools to operate the schedulability tests with different approaches. <br />
@@ -43,4 +61,5 @@ In addition, we provide two scripts to draw the figures according to the obtaine
 These two figures in the folder `figures` are the results in our paper.
 
 ## References
-[^1]: M. Han, T. Zhang, Y. Lin, and Q. Deng. Federated scheduling for typed DAG tasks scheduling analysis on heterogeneous multi-cores. J. Syst. Archit., 112:101870, 2021.
+[^1]: https://pypi.org/project/drs/ 
+[^2]: M. Han, T. Zhang, Y. Lin, and Q. Deng. Federated scheduling for typed DAG tasks scheduling analysis on heterogeneous multi-cores. J. Syst. Archit., 112:101870, 2021.
