@@ -15,7 +15,7 @@ If you only want to reproduce the results in our paper, you can run these bash s
 5. ./experiments/han.sh <schedulability test for the approached in Han et al.>
 ```
 **Please note:**
-- You can skip the first step by using the provided pure task sets directly, which are the same as what we presented in our paper.
+- If you don't want to generate the tasksets by yourself, you can download the generated task sets from https://tu-dortmund.sciebo.de/s/9j7limbr8DvfVdT directly, which are the same as what we presented in our paper. You should unzip the downloaded file and put all these task sets files to the folder `/experiments/inputs/tasks_pure`, and continue the Step 2.
 - Step 2 can start once all the pure task sets have been generated.
 - Step 3, 4, and 5 can be executed in parallel once all the typed-DAG task sets have been generated from Step 2.
 
